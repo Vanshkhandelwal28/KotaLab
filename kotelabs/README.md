@@ -35,7 +35,7 @@ ES modules and the `THREE` import need `http://`, not `file://`.
 | **GitHub Pages** | Push, then Settings → Pages → deploy from branch root. |
 | **cPanel / Hostinger** | Upload the folder contents to `public_html`. |
 
-The current site URL is `https://kotalabs.vercel.app/`. Add a custom domain only if you own one, then update the canonical and social metadata to match.
+The current site URL is `https://www.kotalabs.in/`. Update the canonical and social metadata if the primary domain ever changes.
 
 **Pushing to GitHub for the first time**
 
@@ -142,7 +142,7 @@ numbers beats ten screenshots.**
 
 ## 5. Before you go live — small checklist
 
-- [ ] Verify the canonical URL, Open Graph URL, `sitemap.xml` and `robots.txt` use `https://kotalabs.vercel.app/` (or your custom domain if configured).
+- [ ] Verify the canonical URL, Open Graph URL, `sitemap.xml` and `robots.txt` use `https://www.kotalabs.in/` (or your custom domain if configured).
 - [ ] Create `hello@kotelabs.com` (or change the mailto).
 - [ ] Add Google Analytics 4 or Plausible — one `<script>` before `</body>`.
 - [ ] Claim the **Google Business Profile** for "KotaLabs, Kota" (this drives local calls more than the site does).
