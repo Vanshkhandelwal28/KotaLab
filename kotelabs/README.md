@@ -3,7 +3,7 @@
 A production-ready, hand-coded marketing site for a web-design studio in Kota, Rajasthan.
 No build step, no npm install, no framework. Upload the folder and it runs.
 
-- **Pages:** `index.html` (home), `work.html` (live portfolio & founding slots), `website-cost-kota.html` (Kota website pricing guide), `hospital-salon-websites-kota.html` (hospital, clinic & unisex salon websites), `ecommerce-3d-websites-kota.html` (3D & digital product catalogue websites), `404.html`, and `hamburger-demo.html` (interactive component demo)
+- **Pages:** `index.html` (home), `work.html` (live portfolio & founding slots), `website-cost-kota.html` (Kota website pricing guide), `hospital-websites-kota.html` (hospital, clinic & doctor websites), `salon-websites-kota.html` (unisex salon & bridal studio websites), `ecommerce-3d-websites-kota.html` (3D & digital product catalogue websites), `404.html`, and `hamburger-demo.html` (interactive component demo)
 - **3D:** one persistent Three.js + GLSL layer behind the *whole page* — a warm-white spiral galaxy made from tiny circular particles, with a bright core, gentle twinkle, cursor wake, and a **scroll-driven dispersion** that opens the spiral into a screen-wide dust field. Uses 32,000 particles on desktop, 15,000 on mobile, and 7,600 on low-power devices. Loaded lazily; never downloaded for reduced-motion users.
 - **Type:** Geist + Geist Mono (display / labels) and Inter (body), all self-hosted
 - **Animation:** counting preloader, masked line reveals, a pinned word-by-word manifesto, scroll progress bar, scroll colour grading, sticky process rail, counters, marquee, accordions, magnetic buttons, and a gradient footer wordmark with a wipe + travelling sheen — all hand-written, no GSAP / no Lenis, ~40 KB of JS total
@@ -66,7 +66,7 @@ git push -u origin main
 
 **Email / address / hours:** `vanshkhandelwal777@gmail.com`, `Kota, Rajasthan 324005`, `Mon–Sun 10:00–21:00` — in the footer of `index.html` and `work.html`.
 
-**Prices:** in `index.html` (and the 3 Kota SEO landing pages) inside the `.plans` block. Across all 4 packages, KotaLabs offers end-to-end website management (charges depend on discussion), focusing on WhatsApp order, booking, and enquiry conversion flows:
+**Prices:** in `index.html` (and the 4 Kota SEO landing pages) inside the `.plans` block. Across all 4 packages, KotaLabs offers end-to-end website management (charges depend on discussion), focusing on WhatsApp order, booking, and enquiry conversion flows:
 
 | Plan | Regular (struck) | Offer / Starting price | Badge |
 |---|---|---|---|
@@ -161,7 +161,8 @@ kotelabs/
 ├── index.html            # home: hero, services, work slots, process, pricing, founders, contact
 ├── work.html             # live portfolio + founding-slot pitch
 ├── website-cost-kota.html          # Kota website cost & 4-package comparison guide
-├── hospital-salon-websites-kota.html # Hospital, clinic & unisex salon websites in Kota
+├── hospital-websites-kota.html     # Hospital, clinic & doctor websites in Kota
+├── salon-websites-kota.html        # Unisex salon & bridal studio websites in Kota
 ├── ecommerce-3d-websites-kota.html # 3D websites & product catalogue showrooms in Kota
 ├── hamburger-demo.html   # interactive SVG hamburger-morph component demo
 ├── 404.html
