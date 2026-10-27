@@ -3,7 +3,7 @@
 A production-ready, hand-coded marketing site for a web-design studio in Kota, Rajasthan.
 No build step, no npm install, no framework. Upload the folder and it runs.
 
-- **Pages:** `index.html` (home), `work.html` (empty-state work page), `404.html`, and `hamburger-demo.html` (interactive component demo)
+- **Pages:** `index.html` (home), `work.html` (live portfolio & founding slots), `website-cost-kota.html` (Kota website pricing guide), `hospital-websites-kota.html` (hospital, clinic & doctor websites), `salon-websites-kota.html` (unisex salon & bridal studio websites), `ecommerce-3d-websites-kota.html` (3D & digital product catalogue websites), `404.html`, and `hamburger-demo.html` (interactive component demo)
 - **3D:** one persistent Three.js + GLSL layer behind the *whole page* — a warm-white spiral galaxy made from tiny circular particles, with a bright core, gentle twinkle, cursor wake, and a **scroll-driven dispersion** that opens the spiral into a screen-wide dust field. Uses 32,000 particles on desktop, 15,000 on mobile, and 7,600 on low-power devices. Loaded lazily; never downloaded for reduced-motion users.
 - **Type:** Geist + Geist Mono (display / labels) and Inter (body), all self-hosted
 - **Animation:** counting preloader, masked line reveals, a pinned word-by-word manifesto, scroll progress bar, scroll colour grading, sticky process rail, counters, marquee, accordions, magnetic buttons, and a gradient footer wordmark with a wipe + travelling sheen — all hand-written, no GSAP / no Lenis, ~40 KB of JS total
@@ -64,15 +64,16 @@ git push -u origin main
 - The JS-side config (which number the contact form sends to) is at the top of `assets/js/app.js` → `SITE`.
 - Every WhatsApp link already carries a pre-filled message; edit the `?text=` value to change the wording.
 
-**Email / address / hours:** `vanshkhandelwal777@gmail.com`, `Kota, Rajasthan 324005`, `Mon–Sun 10:00–21:00` — in the footer of `index.html` and `work.html`.
+**Email / address / hours:** `vanshkhandelwal@kotalabs.in` (studio & Vansh) and `deepeshchauhan@kotalabs.in` (Deepesh, in `#founders`), `Kota, Rajasthan 324005`, `Mon–Sun 10:00–21:00` — across `index.html`, `work.html`, and the Kota SEO guides.
 
-**Prices:** in `index.html` inside the `.plans` block. Each plan shows a struck-through regular price, a % off badge and the offer price:
+**Prices:** in `index.html` (and the 4 Kota SEO landing pages) inside the `.plans` block. Across all 4 packages, KotaLabs offers end-to-end website management (charges depend on discussion), focusing on WhatsApp order, booking, and enquiry conversion flows:
 
-| Plan | Regular (struck) | Offer price | Badge |
+| Plan | Regular (struck) | Offer / Starting price | Badge |
 |---|---|---|---|
 | Launch | ₹8,999 | **₹4,999** | 44% off |
 | Business | ₹12,000 | **₹8,999** | 25% off |
 | Custom / 3D | ₹21,000 | **₹11,000** (starting) | 47% off |
+| Website + Full Management | — (Starting at) | **₹25,000** (starting) | All-in-one |
 
 Structure of one price block (copy this if you add a plan):
 
@@ -158,7 +159,11 @@ numbers beats ten screenshots.**
 ```
 kotelabs/
 ├── index.html            # home: hero, services, work slots, process, pricing, founders, contact
-├── work.html             # empty-state work page (deliberate, not broken)
+├── work.html             # live portfolio + founding-slot pitch
+├── website-cost-kota.html          # Kota website cost & 4-package comparison guide
+├── hospital-websites-kota.html     # Hospital, clinic & doctor websites in Kota
+├── salon-websites-kota.html        # Unisex salon & bridal studio websites in Kota
+├── ecommerce-3d-websites-kota.html # 3D websites & product catalogue showrooms in Kota
 ├── hamburger-demo.html   # interactive SVG hamburger-morph component demo
 ├── 404.html
 ├── robots.txt / sitemap.xml

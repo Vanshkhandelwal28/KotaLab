@@ -264,7 +264,7 @@ function init(canvas) {
   let pageProgress = 0;
   let targetSpreadProgress = 0;
   let spreadProgress = 0;
-  const manifestoSection = document.getElementById("manifesto");
+  const manifestoSection = document.getElementById("why-us") || document.getElementById("manifesto") || document.querySelector(".manifesto");
   const servicesSection = document.getElementById("services");
 
   window.addEventListener("pointermove", (event) => {
