@@ -52,14 +52,15 @@ git push -u origin main
 
 ## 3. Edit the essentials
 
-**Phone numbers / WhatsApp** appear in a few places. Search-and-replace these two strings everywhere:
+**Phone numbers / WhatsApp** appear in a few places. Search-and-replace these three strings everywhere:
 
 ```
+918764982341      →  KotaLabs  (91 + 8764982341 · official WhatsApp Business & Call)
 917898140600      →  Vansh     (91 + 7898140600)
 919462120133      →  Deepesh   (91 + 9462120133)
 ```
 
-- `tel:+917898140600` is the click-to-call version.
+- `tel:+918764982341` is the universal click-to-call version (founder cards keep Vansh & Deepesh numbers).
 - The JS-side config (which number the contact form sends to) is at the top of `assets/js/app.js` → `SITE`.
 - Every WhatsApp link already carries a pre-filled message; edit the `?text=` value to change the wording.
 

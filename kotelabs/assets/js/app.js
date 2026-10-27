@@ -42,7 +42,7 @@
   /* 1. Config — edit in one place                                       */
   /* ------------------------------------------------------------------ */
   const SITE = {
-    whatsapp: "917898140600", // Vansh — where the contact form is sent
+    whatsapp: "918764982341", // Official KotaLabs WhatsApp Business — where the contact form is sent
     loaderMinMs: 420,
     loaderMaxMs: 1100,
   };
