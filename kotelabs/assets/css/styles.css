@@ -1598,6 +1598,20 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
   gap: 0.5rem;
 }
 .founder__phone:hover { color: var(--lime); }
+.founder__email {
+  font-family: var(--mono);
+  font-size: clamp(0.74rem, 1.15vw, 0.84rem);
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  margin-top: -0.35rem;
+  overflow-wrap: anywhere;
+  transition: color 0.25s ease;
+}
+.founder__email svg { flex: none; color: var(--lime-dim); }
+.founder__email:hover { color: var(--lime); }
 .founder__actions { display: flex; flex-wrap: wrap; gap: 0.55rem; }
 .founder__actions .btn { flex: 1 1 auto; }
 
@@ -1801,6 +1815,7 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 .contact__quick { display: grid; gap: 0.85rem; margin-top: 1.55rem; }
 @media (min-width: 560px) {
   .contact__quick { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact__quick > .quick-card--wide,
   .contact__quick > .quick-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 .quick-card {

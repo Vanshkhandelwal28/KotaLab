@@ -64,7 +64,7 @@ git push -u origin main
 - The JS-side config (which number the contact form sends to) is at the top of `assets/js/app.js` → `SITE`.
 - Every WhatsApp link already carries a pre-filled message; edit the `?text=` value to change the wording.
 
-**Email / address / hours:** `vanshkhandelwal777@gmail.com`, `Kota, Rajasthan 324005`, `Mon–Sun 10:00–21:00` — in the footer of `index.html` and `work.html`.
+**Email / address / hours:** `vanshkhandelwal@kotalabs.in` (studio & Vansh) and `deepeshchauhan@kotalabs.in` (Deepesh, in `#founders`), `Kota, Rajasthan 324005`, `Mon–Sun 10:00–21:00` — across `index.html`, `work.html`, and the Kota SEO guides.
 
 **Prices:** in `index.html` (and the 4 Kota SEO landing pages) inside the `.plans` block. Across all 4 packages, KotaLabs offers end-to-end website management (charges depend on discussion), focusing on WhatsApp order, booking, and enquiry conversion flows:
 
