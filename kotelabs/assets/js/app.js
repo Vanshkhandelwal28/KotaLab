@@ -441,7 +441,7 @@
         get("budget") ? `Budget: ${get("budget")}` : null,
         get("brief") ? `About the project: ${get("brief")}` : null,
         "",
-        "Website: https://kotalabs.vercel.app/",
+        "Website: https://www.kotalabs.in/",
       ].filter(Boolean);
 
       window.open(`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
@@ -529,7 +529,7 @@
   /* ------------------------------------------------------------------ */
   /* 16. First-party Vercel Web Analytics & Speed Insights (prod only)   */
   /* ------------------------------------------------------------------ */
-  if (/\.vercel\.app$/i.test(window.location.hostname)) {
+  if (/(\.vercel\.app|(^|\.)kotalabs\.in)$/i.test(window.location.hostname)) {
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     ["/_vercel/insights/script.js", "/_vercel/speed-insights/script.js"].forEach((src) => {
