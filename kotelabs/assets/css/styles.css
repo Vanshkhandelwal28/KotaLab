@@ -1229,113 +1229,42 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 .project-card__link:hover { gap: 0.75rem; color: #e1ff88; }
 .project-card__visual:hover .project-card__visit { transform: translateY(-1px); background: #dcff80; }
 
-/* ==========================================================================
-   ONGOING PROJECTS — in-progress builds, listed as an index (no mockups yet)
-   ========================================================================== */
-.ongoing { margin-top: clamp(2.6rem, 5vw, 4.2rem); }
-.ongoing__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem 1.5rem;
-  margin-bottom: 1.4rem;
-}
-.ongoing__head .eyebrow { margin-bottom: 0; }
-.ongoing__note {
-  font-family: var(--mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-dim);
-}
-.ongoing-list { border-top: 1px solid var(--line); }
-.ongoing-row {
-  display: grid;
-  grid-template-columns: 2.8rem minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(0.9rem, 2.4vw, 2rem);
-  padding-block: clamp(1.1rem, 2vw, 1.5rem);
-  padding-inline: 0.35rem;
-  border-bottom: 1px solid var(--line-soft);
-  transition: background-color 0.3s ease, padding-inline 0.45s var(--ease);
-}
-.ongoing-row:hover {
-  background: linear-gradient(90deg, rgba(201, 242, 77, 0.045), transparent 62%);
-  padding-inline: 0.8rem;
-}
-.ongoing-row:focus-visible { outline-offset: -3px; }
-.ongoing-row__num {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: var(--muted-dim);
-  transition: color 0.35s ease;
-}
-.ongoing-row:hover .ongoing-row__num { color: var(--lime); }
-.ongoing-row__body { display: grid; gap: 0.42rem; min-width: 0; }
-.ongoing-row__title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.85rem; }
-.ongoing-row__title {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  transition: color 0.35s ease;
-}
-.ongoing-row:hover .ongoing-row__title { color: var(--lime); }
-.ongoing-row__status {
+/* Small status tag pinned to the top of a project card's browser mockup —
+   used on cards whose build is still in progress. */
+.project-card__badge {
+  position: absolute;
+  top: clamp(1.05rem, 2vw, 1.5rem);
+  left: clamp(1.05rem, 2vw, 1.5rem);
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
+  padding: 0.26rem 0.62rem;
+  border-radius: 999px;
+  background: var(--lime);
+  color: #0a0f02;
   font-family: var(--mono);
   font-size: 0.58rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--lime);
-  border: 1px solid rgba(201, 242, 77, 0.32);
-  border-radius: 999px;
-  padding: 0.24rem 0.6rem;
-  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
-.ongoing-row__status i {
+.project-card__badge i {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--lime);
+  background: #0a0f02;
   flex: none;
   animation: pulse 2.4s ease-in-out infinite;
 }
-.ongoing-row__desc { color: var(--muted); font-size: 0.9rem; line-height: 1.6; max-width: 64ch; }
-.ongoing-row__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.25rem 0.85rem;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted-dim);
-}
-.ongoing-row__domain { text-transform: none; letter-spacing: 0.04em; color: var(--muted); }
-.ongoing-row__arrow {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  flex: none;
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.5s var(--ease);
-}
-.ongoing-row__arrow svg { width: 15px; height: 15px; }
-.ongoing-row:hover .ongoing-row__arrow {
-  background: var(--lime);
-  color: #0a0f02;
-  border-color: transparent;
-  transform: rotate(-45deg);
+/* Preview stills whose source dimensions we don't control keep the mockup's
+   shape via a fixed frame + cover crop (top of the page stays visible). */
+.project-browser__viewport img.preview-cover {
+  aspect-ratio: 1200 / 770;
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* ==========================================================================
@@ -2523,12 +2452,6 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
   .cap__arrow { grid-area: arrow; display: grid; align-self: start; margin-top: 0.1rem; }
   .project-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .project-card__body { min-height: 0; }
-  .ongoing { margin-top: 2.4rem; }
-  .ongoing-row { grid-template-columns: minmax(0, 1fr) auto; gap: 0.8rem; padding-inline: 0.1rem; }
-  .ongoing-row:hover { padding-inline: 0.35rem; }
-  .ongoing-row__num { display: none; }
-  .ongoing-row__desc { font-size: 0.85rem; }
-  .ongoing-row__arrow { width: 34px; height: 34px; }
   .form__foot { flex-direction: column-reverse; align-items: stretch; }
   .form__foot .btn { width: 100%; }
   .form__hint { max-width: none; }
