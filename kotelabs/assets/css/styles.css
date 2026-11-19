@@ -1229,6 +1229,44 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 .project-card__link:hover { gap: 0.75rem; color: #e1ff88; }
 .project-card__visual:hover .project-card__visit { transform: translateY(-1px); background: #dcff80; }
 
+/* Small status tag pinned to the top of a project card's browser mockup —
+   used on cards whose build is still in progress. */
+.project-card__badge {
+  position: absolute;
+  top: clamp(1.05rem, 2vw, 1.5rem);
+  left: clamp(1.05rem, 2vw, 1.5rem);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.26rem 0.62rem;
+  border-radius: 999px;
+  background: var(--lime);
+  color: #0a0f02;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.project-card__badge i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0a0f02;
+  flex: none;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+/* Preview stills whose source dimensions we don't control keep the mockup's
+   shape via a fixed frame + cover crop (top of the page stays visible). */
+.project-browser__viewport img.preview-cover {
+  aspect-ratio: 1200 / 770;
+  object-fit: cover;
+  object-position: top center;
+}
+
 /* ==========================================================================
    PROCESS (sticky rail)
    ========================================================================== */
